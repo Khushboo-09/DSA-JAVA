@@ -1,6 +1,7 @@
-package printinglinkedlist;
+package appendremovenode;
 
 public class LinkedList {
+
     private Node head;
     private Node tail;
     private int length;
@@ -9,9 +10,17 @@ public class LinkedList {
         int value;
         Node next;
 
+        public Node() {
+
+        }
+
         public Node(int value) {
             this.value = value;
         }
+    }
+
+    public LinkedList() {
+
     }
 
     public LinkedList(int val) {
@@ -46,10 +55,55 @@ public class LinkedList {
         Node tmp = head;
         while (tmp != null) {
             System.out.println(tmp.value);
+
             tmp = tmp.next;
         }
     }
 
-    
+    public void appendNode(int value) {
+
+        Node newNode = new Node(value);
+        newNode.value = value;
+        if (length == 0) {
+
+            head = newNode;
+            tail = newNode;
+            newNode.next = null;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        length++;
+
+    }
+
+    public Node removeNode() {
+
+        if (length == 0) {
+            return null;
+        }
+        Node prevNode;
+        Node temp;
+        prevNode = head;
+        temp = head;
+
+      
+        while (temp.next != null) {
+            prevNode = temp;
+            temp = temp.next;
+           
+        }
+
+        tail = prevNode;
+        tail.next = null;
+        length--;
+
+        if(length == 0){
+           head = null;
+            tail =  null; 
+        }
+        return temp;
+
+    }   
 
 }
