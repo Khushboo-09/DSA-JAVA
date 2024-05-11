@@ -1,4 +1,4 @@
-package appendremovenode;
+package prependremovenode;
 
 public class LinkedList {
 
@@ -51,7 +51,7 @@ public class LinkedList {
         System.out.println("Length: " + length);
     }
 
-    public int getLengthVal() {
+    public int getLengthVal(){
         return length;
     }
 
@@ -107,6 +107,57 @@ public class LinkedList {
         }
         return temp;
 
+    }
+
+    public Node get(int index) {
+        if (index < 0 || index > length) {
+            return null;
+        }
+        Node tmp;
+        tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp;
+    }
+
+    public boolean set(int index, int value) {
+        Node tmp = get(index);
+        if (tmp != null) {
+            tmp.value = value;
+            return true;
+
+        }
+        return false;
+
+    }
+
+    public void prepend(int value) {
+        Node tmp = new Node(value);
+        if (length == 0) {
+
+            head = tmp;
+            tail = tmp;
+        } else {
+            tmp.next = head;
+            head = tmp;
+        }
+        length++;
+    }
+
+    public Node removeFirst() {
+        if (length == 0) {
+            return null;
+        }
+
+        Node tmp = head;
+        head = head.next;
+        tmp.next = null;
+        length--;
+        if(length ==0){
+            tail = null;
+        }
+        return tmp;
     }
 
 }

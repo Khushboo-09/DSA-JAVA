@@ -42,6 +42,10 @@ public class LinkedList {
         System.out.println("Length: " + length);
     }
 
+    public int getLengthVal() {
+        return length;
+    }
+
     public void printList() {
         Node tmp = head;
         while (tmp != null) {
@@ -49,7 +53,5 @@ public class LinkedList {
             tmp = tmp.next;
         }
     }
-
-    
 
 }

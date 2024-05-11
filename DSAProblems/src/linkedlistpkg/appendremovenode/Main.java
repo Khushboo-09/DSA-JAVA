@@ -12,15 +12,25 @@ public class Main {
 
         System.out.println("Removing element from End.");
 
-        System.out.println("First Removal-" + myLinkedList.removeNode().value);
+        System.out.println("First Removal-"
+                + ((Integer.toString(myLinkedList.getLengthVal()).compareTo("0") == 0) ? myLinkedList.removeNode()
+                        : myLinkedList.removeNode().value));
 
-        System.out.println("Second Removal-" + myLinkedList.removeNode().value);
+        System.out.println("Second Removal-"
+                + ((Integer.toString(myLinkedList.getLengthVal()).compareTo("0") == 0) ? myLinkedList.removeNode()
+                        : myLinkedList.removeNode().value));
 
-        System.out.println("Third Removal-" + myLinkedList.removeNode().value);
+        System.out.println("Third Removal-"
+                + ((Integer.toString(myLinkedList.getLengthVal()).compareTo("0") == 0) ? myLinkedList.removeNode()
+                        : myLinkedList.removeNode().value));
 
-        System.out.println("Fourth Removal-" + myLinkedList.removeNode().value);
+        System.out.println("Fourth Removal-"
+                + ((Integer.toString(myLinkedList.getLengthVal()).compareTo("0") == 0) ? myLinkedList.removeNode()
+                        : myLinkedList.removeNode().value));
 
-        System.out.println("Fifth Removal-" + myLinkedList.removeNode());
-      
+        System.out.println("Fifth Removal-"
+                + ((Integer.toString(myLinkedList.getLengthVal()).compareTo("0") == 0) ? myLinkedList.removeNode()
+                        : myLinkedList.removeNode().value));
+
     }
 }
