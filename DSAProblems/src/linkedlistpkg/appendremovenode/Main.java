@@ -32,5 +32,7 @@ public class Main {
                 + ((Integer.toString(myLinkedList.getLengthVal()).compareTo("0") == 0) ? myLinkedList.removeNode()
                         : myLinkedList.removeNode().value));
 
+                        
+
     }
 }

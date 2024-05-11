@@ -64,6 +64,8 @@ public class LinkedList {
         }
     }
 
+    
+
     public void appendNode(int value) {
 
         Node newNode = new Node(value);
